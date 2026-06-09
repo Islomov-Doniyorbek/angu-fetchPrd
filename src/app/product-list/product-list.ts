@@ -5,11 +5,13 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 
+import { TruncPipe } from '../pipes/trunc-pipe';
+
 
 
 @Component({
   selector: 'app-product-list',
-  imports: [MatCardModule, MatGridListModule],
+  imports: [MatCardModule, MatGridListModule, TruncPipe],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
 })
