@@ -1,6 +1,19 @@
-<p>product-list works!</p>
-<ul>
+<div class="grid grid-cols-4 p-4 gap-3">
+
     @for (item of prdList(); track $index) {
-        <li>{{item.title}}</li>
+        <mat-card class="example-card" appearance="outlined">
+          <mat-card-header>
+            <mat-card-title-group>
+              <mat-card-title>{{item.title}}</mat-card-title>
+              <mat-grid-tile>1</mat-grid-tile>
+              <mat-card-subtitle>{{item.category}}</mat-card-subtitle>
+              <img mat-card-sm-image [src]="item.image" >
+            </mat-card-title-group>
+          </mat-card-header>
+          <mat-card-content>
+            {{item.decription}}
+          </mat-card-content>
+        </mat-card>
+    
     }
-</ul>
+</div>
