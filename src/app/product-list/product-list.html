@@ -1,19 +1,7 @@
 <div class="grid grid-cols-4 p-4 gap-3">
 
     @for (item of prdList(); track $index) {
-        <mat-card class="example-card" appearance="outlined">
-          <mat-card-header>
-            <mat-card-title-group>
-              <mat-card-title>{{item.title | trunc:40}}</mat-card-title>
-              <mat-grid-tile>1</mat-grid-tile>
-              <mat-card-subtitle>{{item.category}}</mat-card-subtitle>
-              <img mat-card-sm-image [src]="item.image" >
-            </mat-card-title-group>
-          </mat-card-header>
-          <mat-card-content>
-            {{item.description | trunc:120:'...'}}
-          </mat-card-content>
-        </mat-card>
-    
+        <app-prd-card [item]="item" />    
     }
 </div>
+ 

@@ -6,12 +6,13 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 import { TruncPipe } from '../pipes/trunc-pipe';
+import { PrdCard } from "../components/card/prd-card/prd-card";
 
 
 
 @Component({
   selector: 'app-product-list',
-  imports: [MatCardModule, MatGridListModule, TruncPipe],
+  imports: [PrdCard],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
 })
